@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Cipa</title>
+    <meta name="description" content="Portofolio Cipa - Profesional Web Developer">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#fdfaf6',
+                        yellow: {
+                            400: '#ffcc00',
+                            500: '#ffb800',
+                        },
+                        sky: {
+                            400: '#7dd3fc',
+                        },
+                        dark: '#2d3436',
+                    },
+                    fontFamily: {
+                        sans: ['Fredoka', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'retro': '4px 4px 0 #2d3436',
+                        'retro-lg': '8px 8px 0 #2d3436',
+                        'retro-sky': '4px 4px 0 #7dd3fc',
+                        'retro-sky-lg': '8px 8px 0 #7dd3fc',
+                        'retro-yellow': '4px 4px 0 #ffcc00',
+                        'retro-yellow-lg': '8px 8px 0 #ffcc00',
+                        'retro-hover': '4px 6px 0 #2d3436',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css?v=8">
+</head>
+<body class="bg-cream text-dark overflow-x-hidden grid-pattern">
+
+    <!-- Background Elements -->
+    <div class="blob blob-1 hidden md:block"></div>
+    <div class="blob blob-2 hidden md:block"></div>
+
+    <!-- Header -->
+    <header class="header fixed top-0 left-0 w-full px-[9%] py-4 md:py-5 bg-transparent border-b-4 border-transparent flex justify-between items-center z-[100] transition-all duration-300">
+        <a href="#" class="text-3xl md:text-4xl font-bold text-dark drop-shadow-[2px_2px_0_#ffcc00]">Linggar.</a>
+        
+        <nav class="navbar hidden md:flex items-center space-x-12">
+            <a href="#home" class="nav-link active text-xl font-semibold hover:text-sky-400 transition-colors relative">Beranda</a>
+            <a href="#about" class="nav-link text-xl font-semibold hover:text-sky-400 transition-colors relative">Tentang</a>
+            <a href="#portfolio" class="nav-link text-xl font-semibold hover:text-sky-400 transition-colors relative">Portofolio</a>
+            <a href="#contact" class="nav-link text-xl font-semibold hover:text-sky-400 transition-colors relative">Kontak</a>
+        </nav>
+
+        <div class="bx bx-menu text-5xl cursor-pointer md:hidden" id="menu-icon"></div>
+    </header>
+
+    <!-- Mobile Nav -->
+    <nav class="mobile-navbar fixed top-[90px] left-0 w-full bg-cream border-t-4 border-b-4 border-dark hidden flex-col items-center py-6 z-[90]">
+        <a href="#home" class="nav-link active text-2xl font-semibold my-4">Beranda</a>
+        <a href="#about" class="nav-link text-2xl font-semibold my-4">Tentang</a>
+        <a href="#portfolio" class="nav-link text-2xl font-semibold my-4">Portofolio</a>
+        <a href="#contact" class="nav-link text-2xl font-semibold my-4">Kontak</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen px-[9%] pt-24 pb-4 flex flex-col md:flex-row justify-center items-center gap-6 lg:gap-12" id="home">
+        <div class="hidden-fade flex-1">
+            <h3 class="text-xl md:text-2xl font-semibold">Halo, Nama Saya</h3>
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight my-1" style="-webkit-text-stroke: 1px #2d3436;">
+                <span class="text-sky-400 drop-shadow-[0_0_12px_rgba(125,211,252,0.8)]">Linggar</span>
+                <span class="text-yellow-400 drop-shadow-[0_0_12px_rgba(255,204,0,0.8)]">Bhilqiz</span>
+            </h1>
+            <h3 class="text-xl md:text-2xl font-semibold mb-3">Dan Saya Seorang <span class="multiple-text text-sky-400"></span></h3>
+            
+            <p class="text-base md:text-lg leading-relaxed max-w-2xl bg-white p-4 rounded-2xl border-[3px] border-dark shadow-retro-sky mb-4">
+                Saya adalah seorang kreatif yang bersemangat dalam membangun pengalaman digital yang menarik dan inovatif. Memadukan desain estetis dengan kode yang bersih.
+            </p>
+            
+            <div class="flex items-center mb-5 flex-wrap gap-3">
+                <a href="#" class="flex justify-center items-center w-10 h-10 md:w-12 md:h-12 bg-white border-[3px] border-dark rounded-full text-xl md:text-2xl shadow-retro-sky hover:-translate-y-1 hover:shadow-retro-yellow hover:bg-yellow-400 transition-all duration-300"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" class="flex justify-center items-center w-10 h-10 md:w-12 md:h-12 bg-white border-[3px] border-dark rounded-full text-xl md:text-2xl shadow-retro-sky hover:-translate-y-1 hover:shadow-retro-yellow hover:bg-yellow-400 transition-all duration-300"><i class='bx bxl-github' ></i></a>
+                <a href="#" class="flex justify-center items-center w-10 h-10 md:w-12 md:h-12 bg-white border-[3px] border-dark rounded-full text-xl md:text-2xl shadow-retro-sky hover:-translate-y-1 hover:shadow-retro-yellow hover:bg-yellow-400 transition-all duration-300"><i class='bx bxl-instagram-alt' ></i></a>
+            </div>
+            
+            <a href="#portfolio" class="inline-block px-6 py-2.5 bg-yellow-400 border-[3px] border-dark rounded-full shadow-retro-sky text-base md:text-lg font-bold hover:-translate-y-1 hover:bg-yellow-500 hover:shadow-retro-hover transition-all duration-300">Lihat Karya Saya</a>
+        </div>
+        
+        <div class="hidden-right flex-1 flex justify-center">
+            <!-- Container Utama -->
+            <div class="relative w-[50vw] h-[50vw] md:w-[28vw] md:h-[28vw] flex justify-center items-end">
+                <!-- Background Biru Morphing -->
+                <div class="absolute inset-0 bg-sky-400 border-4 border-dark rounded-[30%_70%_70%_30%/30%_30%_70%_70%] shadow-retro-yellow-lg morph-anim z-0"></div>
+                
+                <!-- Foto Cipa (Efek Glow Menggunakan Drop Shadow & Fade Halus) -->
+                <div class="relative z-20 w-[160%] h-[160%] max-w-none translate-y-10 md:translate-y-20 flex justify-center items-center">
+                    <img src="assets/images/cipa.png" alt="Foto Cipa" class="w-full h-full object-contain animate-pulse-glow" style="-webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 88%, rgba(0,0,0,0) 100%); mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 88%, rgba(0,0,0,0) 100%);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section: Timeline Perjalanan -->
+    <section class="min-h-screen pt-10 pb-20 relative z-10" id="about">
+        <h2 class="text-center text-5xl md:text-6xl font-bold mb-8 md:mb-12 text-dark relative z-20">Perjalanan <span class="text-sky-400 drop-shadow-[2px_2px_0_#2d3436]" style="-webkit-text-stroke: 1px #2d3436;">Saya</span></h2>
+
+        <!-- Prologue -->
+        <div class="max-w-2xl mx-auto text-center mb-16 relative z-20 px-4 hidden-fade">
+            <div class="bg-white/80 backdrop-blur-md border-[3px] border-dark p-6 md:p-8 rounded-2xl shadow-retro-yellow">
+                <p class="text-dark font-medium text-base md:text-lg leading-relaxed">
+                    Setiap perjalanan memiliki titik awalnya sendiri. Dari rasa penasaran di masa kecil hingga akhirnya jatuh cinta dengan dunia pemrograman, berikut adalah kilas balik cerita saya. <br><br>
+                    <span class="font-bold text-sky-500 bg-sky-100 px-3 py-1 rounded-full text-sm mt-2 inline-block border-2 border-dark">✨ Putar fotonya (Hover) untuk membaca kisah! ✨</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Zigzag Timeline Container -->
+        <div class="w-full max-w-7xl mx-auto relative px-4 md:px-0">
+            
+            <!-- Item 1: Left -->
+            <div class="relative w-full flex items-center justify-start py-4 hidden-fade">
+                
+                <!-- Background Decor -->
+                <div class="absolute right-[5%] md:right-[15%] top-1/2 -translate-y-1/2 text-7xl md:text-[130px] font-bold text-transparent opacity-[0.15] pointer-events-none select-none z-0 rotate-12" style="-webkit-text-stroke: 4px #2d3436; font-family: 'Fredoka', sans-serif;">AWAL</div>
+                <div class="absolute right-[25%] top-[10%] animate-float z-0 opacity-60"><i class='bx bxs-star text-4xl text-yellow-400'></i></div>
+                <div class="absolute right-[10%] bottom-[20%] animate-float-delayed z-0 opacity-60"><i class='bx bx-plus text-5xl text-sky-400'></i></div>
+                
+                <!-- Post-it & Extra Confetti -->
+                <div class="absolute hidden md:flex left-[5%] top-[20%] w-28 h-28 bg-yellow-100 border-2 border-dark shadow-retro p-3 flex-col items-center justify-center rotate-6 z-0 opacity-80 hover:opacity-100 hover:scale-105 transition-all cursor-default"><div class="absolute -top-3 left-1/2 -translate-x-1/2 w-10 h-5 bg-white/60 border border-dark/10 -rotate-3 backdrop-blur-sm"></div><p class="text-dark font-bold text-center leading-tight">Mulai<br>Mimpi! 🚀</p></div>
+                <div class="absolute right-[40%] top-[40%] animate-float z-0 opacity-40"><i class='bx bx-x text-3xl text-red-400 font-bold'></i></div>
+                <div class="absolute left-[15%] bottom-[10%] animate-float-delayed z-0 opacity-30"><div class="w-3 h-3 bg-sky-400 rounded-full border-2 border-dark"></div></div>
+                <div class="absolute right-[5%] top-[30%] animate-float z-0 opacity-40"><div class="w-4 h-4 bg-yellow-400 border-2 border-dark rotate-45"></div></div>
+
+                <!-- Bounding Box for SVG Line 1 (Left to Center) -->
+                <div class="absolute top-1/2 md:left-[calc(5%+90px)] md:right-[50%] h-[calc(100%+2rem)] z-0 hidden md:block pointer-events-none">
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%" class="overflow-visible">
+                        <line x1="0" y1="0" x2="100" y2="100" stroke="#ef4444" stroke-width="12" stroke-opacity="0.3" class="animate-pulse" vector-effect="non-scaling-stroke" />
+                        <line x1="0" y1="0" x2="100" y2="100" stroke="#dc2626" stroke-width="4" vector-effect="non-scaling-stroke" />
+                        <path class="animate-thread-flow" d="M 0 0 Q 5 20, 25 25 T 50 50 T 75 75 T 100 100" stroke="#facc15" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+                        <path class="animate-thread-flow" d="M 0 0 Q 20 5, 25 25 T 50 50 T 75 75 T 100 100" stroke="#7dd3fc" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+                    </svg>
+                </div>
+                
+
+
+                <div class="relative z-10 w-full flex justify-center md:justify-start md:pl-[5%]">
+                    <div class="flip-card w-[180px] shrink-0 cursor-pointer">
+                        <div class="flip-card-inner" style="transform: rotateZ(-6deg);">
+                            <!-- Front -->
+                            <div class="flip-card-front bg-white p-2 pb-4 border-[3px] border-dark rounded-xl shadow-retro-sky flex flex-col">
+                                <div class="w-full aspect-square bg-cream border-2 border-dark rounded-lg mb-3 relative overflow-hidden group">
+                                    <img src="assets/images/cipa1.png" alt="Foto Perjalanan 2005" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <h3 class="text-base font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">2005 - Awal</h3>
+                            </div>
+                            <!-- Back -->
+                            <div class="flip-card-back bg-white p-4 border-[3px] border-dark rounded-xl shadow-retro-sky flex flex-col justify-center items-center text-center">
+                                <h4 class="font-bold text-sky-400 mb-2 text-lg" style="-webkit-text-stroke: 0.5px #2d3436;">Masa Kecil</h4>
+                                <p class="text-xs font-medium text-dark leading-relaxed">Dunia selalu terlihat penuh misteri. Masa kecilku penuh dengan membongkar mainan dan bertanya "kenapa?".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Vertical Spacer -->
+            <div class="relative w-full h-6 md:h-8"></div>
+
+            <!-- Item 2: Center -->
+            <div class="relative w-full flex items-center justify-center py-4 hidden-fade">
+                
+                <!-- Background Decor -->
+                <div class="absolute left-[5%] md:left-[10%] top-1/2 -translate-y-1/2 text-7xl md:text-[130px] font-bold text-transparent opacity-[0.15] pointer-events-none select-none z-0 -rotate-6" style="-webkit-text-stroke: 4px #2d3436; font-family: 'Fredoka', sans-serif;">BELAJAR</div>
+                <div class="absolute left-[20%] top-[20%] animate-float-delayed z-0 opacity-60"><i class='bx bx-bulb text-6xl text-yellow-400'></i></div>
+                <div class="absolute right-[10%] top-[10%] animate-float z-0 opacity-40"><i class='bx bx-circle text-4xl text-sky-400'></i></div>
+                
+                <!-- Post-it & Extra Confetti -->
+                <div class="absolute hidden md:flex right-[5%] bottom-[10%] w-32 h-32 bg-sky-100 border-2 border-dark shadow-retro p-3 flex-col items-center justify-center -rotate-6 z-0 opacity-80 hover:opacity-100 hover:scale-105 transition-all cursor-default"><div class="absolute -top-3 left-1/2 -translate-x-1/2 w-10 h-5 bg-white/60 border border-dark/10 rotate-3 backdrop-blur-sm"></div><p class="text-dark font-bold text-center leading-tight">First<br>Bug 🐛</p></div>
+                <div class="absolute left-[35%] top-[10%] animate-float z-0 opacity-50"><i class='bx bxs-star text-2xl text-yellow-400'></i></div>
+                <div class="absolute right-[25%] top-[40%] animate-float-delayed z-0 opacity-40"><i class='bx bx-plus text-4xl text-red-400'></i></div>
+                <div class="absolute left-[10%] bottom-[20%] animate-float z-0 opacity-40"><div class="w-5 h-5 border-2 border-dark rounded-full"></div></div>
+
+                <!-- Bounding Box for SVG Line 2 (Center to Right) -->
+                <div class="absolute top-1/2 md:left-[50%] md:right-[calc(5%+90px)] h-[calc(100%+2rem)] z-0 hidden md:block pointer-events-none">
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%" class="overflow-visible">
+                        <line x1="0" y1="0" x2="100" y2="100" stroke="#ef4444" stroke-width="12" stroke-opacity="0.3" class="animate-pulse" vector-effect="non-scaling-stroke" />
+                        <line x1="0" y1="0" x2="100" y2="100" stroke="#dc2626" stroke-width="4" vector-effect="non-scaling-stroke" />
+                        <path class="animate-thread-flow" d="M 0 0 Q 5 20, 25 25 T 50 50 T 75 75 T 100 100" stroke="#facc15" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+                        <path class="animate-thread-flow" d="M 0 0 Q 20 5, 25 25 T 50 50 T 75 75 T 100 100" stroke="#7dd3fc" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+                    </svg>
+                </div>
+                
+
+
+                <div class="relative z-10 w-full flex justify-center">
+                    <div class="flip-card w-[180px] shrink-0 cursor-pointer">
+                        <div class="flip-card-inner" style="transform: rotateZ(3deg);">
+                            <!-- Front -->
+                            <div class="flip-card-front bg-white p-2 pb-4 border-[3px] border-dark rounded-xl shadow-retro-yellow flex flex-col">
+                                <div class="w-full aspect-square bg-cream border-2 border-dark rounded-lg mb-3 relative overflow-hidden group">
+                                    <img src="assets/images/cipa2.png" alt="Foto Perjalanan 2010" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <h3 class="text-base font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">2010 - Sekolah</h3>
+                            </div>
+                            <!-- Back -->
+                            <div class="flip-card-back bg-white p-4 border-[3px] border-dark rounded-xl shadow-retro-yellow flex flex-col justify-center items-center text-center">
+                                <h4 class="font-bold text-yellow-400 mb-2 text-lg" style="-webkit-text-stroke: 0.5px #2d3436;">Masa Sekolah</h4>
+                                <p class="text-xs font-medium text-dark leading-relaxed">Mulai kenal warnet dan penasaran setengah mati gimana caranya sebuah website bisa muncul di layar.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vertical Spacer -->
+            <div class="relative w-full h-6 md:h-8"></div>
+
+            <!-- Item 3: Right -->
+            <div class="relative w-full flex items-center justify-end py-4 hidden-fade">
+                
+                <!-- Background Decor -->
+                <div class="absolute left-[5%] md:left-[15%] top-1/2 -translate-y-1/2 text-7xl md:text-[130px] font-bold text-transparent opacity-[0.15] pointer-events-none select-none z-0 rotate-6" style="-webkit-text-stroke: 4px #2d3436; font-family: 'Fredoka', sans-serif;">PASSION</div>
+                <div class="absolute left-[25%] bottom-[20%] animate-float z-0 opacity-60"><i class='bx bx-code-alt text-6xl text-sky-400'></i></div>
+                <div class="absolute left-[10%] top-[10%] animate-float-delayed z-0 opacity-50"><i class='bx bx-minus text-5xl text-yellow-400'></i></div>
+                
+                <!-- Post-it & Extra Confetti -->
+                <div class="absolute hidden md:flex left-[15%] top-[5%] w-28 h-28 bg-pink-100 border-2 border-dark shadow-retro p-3 flex-col items-center justify-center rotate-12 z-0 opacity-80 hover:opacity-100 hover:scale-105 transition-all cursor-default"><div class="absolute -top-3 left-1/2 -translate-x-1/2 w-10 h-5 bg-white/60 border border-dark/10 -rotate-6 backdrop-blur-sm"></div><p class="text-dark font-bold text-center leading-tight">Never<br>Give Up!</p></div>
+                <div class="absolute right-[10%] top-[20%] animate-float z-0 opacity-40"><i class='bx bx-x text-4xl text-yellow-500 font-bold'></i></div>
+                <div class="absolute left-[40%] bottom-[10%] animate-float-delayed z-0 opacity-50"><div class="w-3 h-3 bg-sky-400 border-2 border-dark"></div></div>
+                <div class="absolute right-[20%] bottom-[30%] animate-float z-0 opacity-30"><i class='bx bx-circle text-3xl text-red-400'></i></div>
+
+                <!-- Bounding Box for SVG Line 3 (Right to Center) -->
+                <div class="absolute top-1/2 md:left-[50%] md:right-[calc(5%+90px)] h-[calc(100%+2rem)] z-0 hidden md:block pointer-events-none">
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%" class="overflow-visible">
+                        <line x1="100" y1="0" x2="0" y2="100" stroke="#ef4444" stroke-width="12" stroke-opacity="0.3" class="animate-pulse" vector-effect="non-scaling-stroke" />
+                        <line x1="100" y1="0" x2="0" y2="100" stroke="#dc2626" stroke-width="4" vector-effect="non-scaling-stroke" />
+                        <path class="animate-thread-flow" d="M 100 0 Q 95 20, 75 25 T 50 50 T 25 75 T 0 100" stroke="#facc15" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+                        <path class="animate-thread-flow" d="M 100 0 Q 80 5, 75 25 T 50 50 T 25 75 T 0 100" stroke="#7dd3fc" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+                    </svg>
+                </div>
+                
+
+
+                <div class="relative z-10 w-full flex justify-center md:justify-end md:pr-[5%]">
+                    <div class="flip-card w-[180px] shrink-0 cursor-pointer">
+                        <div class="flip-card-inner" style="transform: rotateZ(-6deg);">
+                            <!-- Front -->
+                            <div class="flip-card-front bg-white p-2 pb-4 border-[3px] border-dark rounded-xl shadow-retro-sky flex flex-col">
+                                <div class="w-full aspect-square bg-cream border-2 border-dark rounded-lg mb-3 relative overflow-hidden group">
+                                    <img src="assets/images/cipa3.png" alt="Foto Perjalanan 2015" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <h3 class="text-base font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">2015 - Kenal IT</h3>
+                            </div>
+                            <!-- Back -->
+                            <div class="flip-card-back bg-white p-4 border-[3px] border-dark rounded-xl shadow-retro-sky flex flex-col justify-center items-center text-center">
+                                <h4 class="font-bold text-sky-400 mb-2 text-lg" style="-webkit-text-stroke: 0.5px #2d3436;">Mulai Koding</h4>
+                                <p class="text-xs font-medium text-dark leading-relaxed">Bikin baris kode HTML pertamaku. Rasanya magis banget liat teks berubah jadi halaman web nyata!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vertical Spacer -->
+            <div class="relative w-full h-6 md:h-8"></div>
+
+            <!-- Item 4: Center -->
+            <div class="relative w-full flex items-center justify-center py-4 hidden-fade">
+                
+                <!-- Background Decor -->
+                <div class="absolute right-[5%] md:right-[10%] top-1/2 -translate-y-1/2 text-7xl md:text-[130px] font-bold text-transparent opacity-[0.15] pointer-events-none select-none z-0 -rotate-12" style="-webkit-text-stroke: 4px #2d3436; font-family: 'Fredoka', sans-serif;">FOKUS</div>
+                <div class="absolute left-[15%] top-[30%] animate-float-delayed z-0 opacity-60"><i class='bx bxs-coffee-togo text-6xl text-yellow-400'></i></div>
+                <div class="absolute right-[20%] bottom-[10%] animate-float z-0 opacity-50"><i class='bx bxs-star text-3xl text-sky-400'></i></div>
+                
+                <!-- Post-it & Extra Confetti -->
+                <div class="absolute hidden md:flex left-[5%] bottom-[15%] w-32 h-32 bg-yellow-100 border-2 border-dark shadow-retro p-3 flex-col items-center justify-center -rotate-12 z-0 opacity-80 hover:opacity-100 hover:scale-105 transition-all cursor-default"><div class="absolute -top-3 left-1/2 -translate-x-1/2 w-10 h-5 bg-white/60 border border-dark/10 rotate-6 backdrop-blur-sm"></div><p class="text-dark font-bold text-center leading-tight">Need<br>Coffee ☕</p></div>
+                <div class="absolute right-[35%] top-[15%] animate-float z-0 opacity-40"><i class='bx bx-plus text-5xl text-sky-400'></i></div>
+                <div class="absolute left-[25%] top-[5%] animate-float-delayed z-0 opacity-30"><div class="w-4 h-4 bg-red-400 rounded-full border-2 border-dark"></div></div>
+                <div class="absolute right-[10%] top-[40%] animate-float z-0 opacity-50"><i class='bx bxs-star text-2xl text-yellow-400'></i></div>
+
+                <!-- Bounding Box for SVG Line 4 (Center to Left) -->
+                <div class="absolute top-1/2 md:left-[calc(5%+90px)] md:right-[50%] h-[calc(100%+2rem)] z-0 hidden md:block pointer-events-none">
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%" class="overflow-visible">
+                        <line x1="100" y1="0" x2="0" y2="100" stroke="#ef4444" stroke-width="12" stroke-opacity="0.3" class="animate-pulse" vector-effect="non-scaling-stroke" />
+                        <line x1="100" y1="0" x2="0" y2="100" stroke="#dc2626" stroke-width="4" vector-effect="non-scaling-stroke" />
+                        <path class="animate-thread-flow" d="M 100 0 Q 95 20, 75 25 T 50 50 T 25 75 T 0 100" stroke="#facc15" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+                        <path class="animate-thread-flow" d="M 100 0 Q 80 5, 75 25 T 50 50 T 25 75 T 0 100" stroke="#7dd3fc" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+                    </svg>
+                </div>
+                
+
+
+                <div class="relative z-10 w-full flex justify-center">
+                    <div class="flip-card w-[180px] shrink-0 cursor-pointer">
+                        <div class="flip-card-inner" style="transform: rotateZ(3deg);">
+                            <!-- Front -->
+                            <div class="flip-card-front bg-white p-2 pb-4 border-[3px] border-dark rounded-xl shadow-retro-yellow flex flex-col">
+                                <div class="w-full aspect-square bg-cream border-2 border-dark rounded-lg mb-3 relative overflow-hidden group">
+                                    <img src="assets/images/cipa4.png" alt="Foto Perjalanan 2020" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                </div>
+                                <h3 class="text-base font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">2020 - Kuliah</h3>
+                            </div>
+                            <!-- Back -->
+                            <div class="flip-card-back bg-white p-4 border-[3px] border-dark rounded-xl shadow-retro-yellow flex flex-col justify-center items-center text-center">
+                                <h4 class="font-bold text-yellow-400 mb-2 text-lg" style="-webkit-text-stroke: 0.5px #2d3436;">Tenggelam Koding</h4>
+                                <p class="text-xs font-medium text-dark leading-relaxed">Begadang ngerjain tugas akhir, ngopi bergelas-gelas demi mecahin error. Lelah tapi candu.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vertical Spacer -->
+            <div class="relative w-full h-6 md:h-8"></div>
+
+            <!-- Item 5: Left (Final) -->
+            <div class="relative w-full flex items-center justify-start py-4 hidden-fade">
+                
+                <!-- Background Decor -->
+                <div class="absolute right-[5%] md:right-[15%] top-1/2 -translate-y-1/2 text-5xl md:text-[110px] font-bold text-transparent opacity-[0.15] pointer-events-none select-none z-0 rotate-3" style="-webkit-text-stroke: 4px #2d3436; font-family: 'Fredoka', sans-serif;">MASA DEPAN</div>
+                <div class="absolute right-[25%] top-[15%] animate-float z-0 opacity-60"><i class='bx bxs-rocket text-6xl text-sky-400'></i></div>
+                <div class="absolute right-[10%] bottom-[30%] animate-float-delayed z-0 opacity-50"><i class='bx bxs-check-circle text-4xl text-yellow-400'></i></div>
+                
+                <!-- Post-it & Extra Confetti -->
+                <div class="absolute hidden md:flex right-[15%] bottom-[10%] w-36 h-36 bg-sky-100 border-2 border-dark shadow-retro p-4 flex-col items-center justify-center rotate-6 z-0 opacity-80 hover:opacity-100 hover:scale-105 transition-all cursor-default"><div class="absolute -top-3 left-1/2 -translate-x-1/2 w-10 h-5 bg-white/60 border border-dark/10 -rotate-3 backdrop-blur-sm"></div><p class="text-dark font-bold text-center leading-tight">Future Is<br>Bright! 🌟</p></div>
+                <div class="absolute left-[10%] top-[20%] animate-float z-0 opacity-40"><i class='bx bx-x text-5xl text-red-400 font-bold'></i></div>
+                <div class="absolute right-[40%] top-[30%] animate-float-delayed z-0 opacity-50"><div class="w-5 h-5 bg-yellow-400 border-2 border-dark rotate-12"></div></div>
+                <div class="absolute left-[20%] bottom-[20%] animate-float z-0 opacity-30"><i class='bx bx-circle text-4xl text-sky-400'></i></div>
+
+                <!-- Trailing Red String -->
+                <div class="absolute top-[80%] md:left-[calc(5%+90px)] w-[100px] -translate-x-1/2 z-0 hidden md:block pointer-events-none origin-top" style="height: 600px;">
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" width="100%" height="100%" class="overflow-visible">
+                        <line x1="50" y1="0" x2="50" y2="100" stroke="#ef4444" stroke-width="12" stroke-opacity="0.3" class="animate-pulse" vector-effect="non-scaling-stroke" />
+                        <line x1="50" y1="0" x2="50" y2="100" stroke="#dc2626" stroke-width="4" vector-effect="non-scaling-stroke" />
+                        <path class="animate-thread-flow" d="M 50 0 Q 90 20, 50 50 T 50 100" stroke="#facc15" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+                        <path class="animate-thread-flow" d="M 50 0 Q 10 30, 50 60 T 50 100" stroke="#7dd3fc" stroke-width="2" fill="none" vector-effect="non-scaling-stroke" />
+                    </svg>
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-cream/80 to-cream z-10"></div>
+                </div>
+
+                <div class="relative z-10 w-full flex justify-center md:justify-start md:pl-[5%]">
+                    <!-- Card Stack Container -->
+                    <div class="card-stack-container shrink-0" id="transisi-stack">
+                        
+                        <!-- Card 1 (Bottom, index 2) -->
+                        <div class="card-stack-item" data-stack-pos="2">
+                            <div class="bg-white p-2 pb-4 border-[3px] border-dark rounded-xl shadow-retro-yellow flex flex-col">
+                                <div class="w-full aspect-square bg-cream border-2 border-dark rounded-lg mb-3 flex items-center justify-center text-dark/30">
+                                    <i class='bx bx-image-add text-4xl'></i>
+                                </div>
+                                <h3 class="text-base font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">Kerja Tim</h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 (Middle, index 1) -->
+                        <div class="card-stack-item" data-stack-pos="1">
+                            <div class="bg-white p-2 pb-4 border-[3px] border-dark rounded-xl shadow-retro-sky flex flex-col">
+                                <div class="w-full aspect-square bg-cream border-2 border-dark rounded-lg mb-3 flex items-center justify-center text-dark/30">
+                                    <i class='bx bx-image-add text-4xl'></i>
+                                </div>
+                                <h3 class="text-base font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">Wisuda 🎓</h3>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 (Top, index 0) -->
+                        <div class="card-stack-item" data-stack-pos="0">
+                            <div class="bg-white p-2 pb-4 border-[3px] border-dark rounded-xl shadow-retro flex flex-col">
+                                <div class="w-full aspect-square bg-cream border-2 border-dark rounded-lg mb-3 relative overflow-hidden group">
+                                    <img src="assets/images/cipa5.png" alt="Foto Perjalanan 2024" class="w-full h-full object-cover">
+                                    <div class="absolute inset-0 bg-dark/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                        <i class='bx bx-expand-alt text-3xl text-white drop-shadow-md'></i>
+                                    </div>
+                                </div>
+                                <h3 class="text-base font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">Masa Transisi</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- Gallery Section (Life Updates) -->
+    <section class="min-h-screen py-20 relative z-20" id="gallery">
+
+        <div class="w-full max-w-7xl mx-auto px-4 md:px-8 pt-16">
+            <div class="text-center mb-16 hidden-fade">
+                <h2 class="text-5xl md:text-6xl font-bold text-dark drop-shadow-[2px_2px_0_#ef4444] mb-4">Life <span class="text-yellow-400" style="-webkit-text-stroke: 1px #2d3436;">Updates</span></h2>
+                <p class="text-dark/80 text-lg max-w-2xl mx-auto font-medium">Bukan lagi garis waktu yang kaku. Di sini adalah ruang bebas tempat saya menyimpan memori, karya, dan potongan cerita saat ini.</p>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="columns-2 md:columns-3 lg:columns-4 gap-4 md:gap-6 space-y-4 md:space-y-6">
+                
+                <!-- Gallery Item (Vertical) -->
+                <div class="break-inside-avoid bg-white p-2 pb-4 border-[3px] border-transparent hover:border-sky-400 rounded-xl hover:shadow-retro-sky transition-all duration-300 group hidden-fade cursor-pointer">
+                    <div class="w-full aspect-[3/4] bg-cream border-2 border-dark/20 rounded-lg mb-3 flex flex-col items-center justify-center text-dark/30 group-hover:border-dark transition-colors">
+                        <i class='bx bx-image-add text-5xl mb-2'></i>
+                        <span class="text-sm font-bold">Foto Potret</span>
+                    </div>
+                    <p class="text-sm font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">Nongkrong Santai</p>
+                </div>
+
+                <!-- Gallery Item (Square) -->
+                <div class="break-inside-avoid bg-white p-2 pb-4 border-[3px] border-transparent hover:border-yellow-400 rounded-xl hover:shadow-retro-yellow transition-all duration-300 group hidden-fade cursor-pointer">
+                    <div class="w-full aspect-square bg-cream border-2 border-dark/20 rounded-lg mb-3 flex flex-col items-center justify-center text-dark/30 group-hover:border-dark transition-colors">
+                        <i class='bx bx-image-add text-5xl mb-2'></i>
+                        <span class="text-sm font-bold">Foto Kotak</span>
+                    </div>
+                    <p class="text-sm font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">Setup Meja Kerja</p>
+                </div>
+
+                <!-- Gallery Item (Horizontal) -->
+                <div class="break-inside-avoid bg-white p-2 pb-4 border-[3px] border-transparent hover:border-red-400 rounded-xl hover:shadow-retro transition-all duration-300 group hidden-fade cursor-pointer">
+                    <div class="w-full aspect-[4/3] bg-cream border-2 border-dark/20 rounded-lg mb-3 flex flex-col items-center justify-center text-dark/30 group-hover:border-dark transition-colors">
+                        <i class='bx bx-image-add text-5xl mb-2'></i>
+                        <span class="text-sm font-bold">Foto Pemandangan</span>
+                    </div>
+                    <p class="text-sm font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">Liburan Koding</p>
+                </div>
+
+                <!-- Gallery Item (Vertical) -->
+                <div class="break-inside-avoid bg-white p-2 pb-4 border-[3px] border-transparent hover:border-sky-400 rounded-xl hover:shadow-retro-sky transition-all duration-300 group hidden-fade cursor-pointer">
+                    <div class="w-full aspect-[3/5] bg-cream border-2 border-dark/20 rounded-lg mb-3 flex flex-col items-center justify-center text-dark/30 group-hover:border-dark transition-colors">
+                        <i class='bx bx-image-add text-5xl mb-2'></i>
+                        <span class="text-sm font-bold">Foto Panjang</span>
+                    </div>
+                    <p class="text-sm font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">OOTD Ngantor</p>
+                </div>
+
+                <!-- Gallery Item (Square) -->
+                <div class="break-inside-avoid bg-white p-2 pb-4 border-[3px] border-transparent hover:border-yellow-400 rounded-xl hover:shadow-retro-yellow transition-all duration-300 group hidden-fade cursor-pointer">
+                    <div class="w-full aspect-square bg-cream border-2 border-dark/20 rounded-lg mb-3 flex flex-col items-center justify-center text-dark/30 group-hover:border-dark transition-colors">
+                        <i class='bx bx-image-add text-5xl mb-2'></i>
+                        <span class="text-sm font-bold">Foto Kotak</span>
+                    </div>
+                    <p class="text-sm font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">Sertifikat Lulus</p>
+                </div>
+                
+                <!-- Gallery Item (Horizontal) -->
+                <div class="break-inside-avoid bg-white p-2 pb-4 border-[3px] border-transparent hover:border-red-400 rounded-xl hover:shadow-retro transition-all duration-300 group hidden-fade cursor-pointer">
+                    <div class="w-full aspect-[16/9] bg-cream border-2 border-dark/20 rounded-lg mb-3 flex flex-col items-center justify-center text-dark/30 group-hover:border-dark transition-colors">
+                        <i class='bx bx-image-add text-5xl mb-2'></i>
+                        <span class="text-sm font-bold">Foto Lanskap</span>
+                    </div>
+                    <p class="text-sm font-bold text-center text-dark" style="font-family: 'Fredoka', sans-serif;">Proyek Selesai</p>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-yellow-400 text-dark font-bold py-3 px-8 rounded-full border-[3px] border-dark shadow-retro hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all text-lg">Muat Lebih Banyak</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="min-h-screen px-[9%] py-20 relative z-10" id="portfolio">
+        <h2 class="text-center text-6xl font-bold mb-16 text-dark">Karya <span class="text-yellow-400 drop-shadow-[2px_2px_0_#2d3436]" style="-webkit-text-stroke: 1px #2d3436;">Terbaik</span></h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Project 1 -->
+            <div class="hidden-up group relative rounded-3xl border-4 border-dark shadow-retro-sky overflow-hidden bg-white aspect-square hover:-translate-y-2 hover:shadow-retro-yellow-lg transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Proyek 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                
+                <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-400/90 flex flex-col justify-center items-center text-center p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    <h4 class="text-4xl font-bold mb-2 text-dark" style="-webkit-text-stroke: 1px #2d3436;">Desain Web</h4>
+                    <p class="text-lg font-medium mb-6">Website perusahaan dengan desain modern dan responsif.</p>
+                    <a href="#" class="flex justify-center items-center w-16 h-16 bg-white border-4 border-dark rounded-full shadow-[3px_3px_0_#2d3436] hover:bg-sky-400 hover:scale-110 transition-all"><i class='bx bx-link-external text-3xl'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="hidden-up group relative rounded-3xl border-4 border-dark shadow-retro-sky overflow-hidden bg-white aspect-square hover:-translate-y-2 hover:shadow-retro-yellow-lg transition-all duration-300" style="transition-delay: 100ms;">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Proyek 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                
+                <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-400/90 flex flex-col justify-center items-center text-center p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    <h4 class="text-4xl font-bold mb-2 text-dark" style="-webkit-text-stroke: 1px #2d3436;">Aplikasi Web</h4>
+                    <p class="text-lg font-medium mb-6">Sistem manajemen data berbasis web dengan dashboard interaktif.</p>
+                    <a href="#" class="flex justify-center items-center w-16 h-16 bg-white border-4 border-dark rounded-full shadow-[3px_3px_0_#2d3436] hover:bg-sky-400 hover:scale-110 transition-all"><i class='bx bx-link-external text-3xl'></i></a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="hidden-up group relative rounded-3xl border-4 border-dark shadow-retro-sky overflow-hidden bg-white aspect-square hover:-translate-y-2 hover:shadow-retro-yellow-lg transition-all duration-300" style="transition-delay: 200ms;">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Proyek 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                
+                <div class="absolute bottom-0 left-0 w-full h-full bg-yellow-400/90 flex flex-col justify-center items-center text-center p-8 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                    <h4 class="text-4xl font-bold mb-2 text-dark" style="-webkit-text-stroke: 1px #2d3436;">E-Commerce</h4>
+                    <p class="text-lg font-medium mb-6">Platform toko online dengan integrasi pembayaran yang aman.</p>
+                    <a href="#" class="flex justify-center items-center w-16 h-16 bg-white border-4 border-dark rounded-full shadow-[3px_3px_0_#2d3436] hover:bg-sky-400 hover:scale-110 transition-all"><i class='bx bx-link-external text-3xl'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="min-h-screen px-[9%] py-20 relative z-10" id="contact">
+        <h2 class="text-center text-6xl font-bold mb-12 text-dark">Hubungi <span class="text-yellow-400 drop-shadow-[2px_2px_0_#2d3436]" style="-webkit-text-stroke: 1px #2d3436;">Saya</span></h2>
+
+        <form action="#" class="hidden-fade max-w-4xl mx-auto bg-white p-12 rounded-3xl border-4 border-dark shadow-retro-sky">
+            <div class="flex flex-wrap justify-between">
+                <input type="text" placeholder="Nama Lengkap" class="w-full md:w-[48%] p-4 text-xl bg-cream border-4 border-dark rounded-xl my-3 focus:bg-white focus:shadow-retro-yellow focus:-translate-y-1 transition-all outline-none">
+                <input type="email" placeholder="Alamat Email" class="w-full md:w-[48%] p-4 text-xl bg-cream border-4 border-dark rounded-xl my-3 focus:bg-white focus:shadow-retro-yellow focus:-translate-y-1 transition-all outline-none">
+            </div>
+            <div class="flex flex-wrap justify-between">
+                <input type="number" placeholder="Nomor Telepon" class="w-full md:w-[48%] p-4 text-xl bg-cream border-4 border-dark rounded-xl my-3 focus:bg-white focus:shadow-retro-yellow focus:-translate-y-1 transition-all outline-none">
+                <input type="text" placeholder="Subjek Pesan" class="w-full md:w-[48%] p-4 text-xl bg-cream border-4 border-dark rounded-xl my-3 focus:bg-white focus:shadow-retro-yellow focus:-translate-y-1 transition-all outline-none">
+            </div>
+            <textarea cols="30" rows="8" placeholder="Tulis pesan Anda di sini..." class="w-full p-4 text-xl bg-cream border-4 border-dark rounded-xl my-3 focus:bg-white focus:shadow-retro-yellow focus:-translate-y-1 transition-all outline-none resize-none"></textarea>
+            
+            <input type="submit" value="Kirim Pesan" class="mt-8 inline-block px-10 py-4 bg-yellow-400 border-[3px] border-dark rounded-full shadow-retro-sky text-xl font-bold hover:-translate-y-1 hover:bg-yellow-500 hover:shadow-retro-hover transition-all duration-300 cursor-pointer">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="flex justify-between items-center flex-wrap px-[9%] py-8 bg-yellow-400 border-t-4 border-dark mt-auto">
+        <div class="footer-text">
+            <p class="text-lg font-bold text-dark">Copyright &copy; 2026 oleh Cipa | All Rights Reserved.</p>
+        </div>
+        <div class="mt-4 sm:mt-0">
+            <a href="#home" class="flex justify-center items-center p-3 bg-white border-4 border-dark rounded-xl shadow-[3px_3px_0_#2d3436] hover:bg-sky-400 hover:-translate-y-1 transition-all"><i class='bx bx-up-arrow-alt text-3xl'></i></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="assets/js/script.js"></script>
+    <!-- Card Stack Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const stack = document.getElementById('transisi-stack');
+            if(stack) {
+                const cards = Array.from(stack.querySelectorAll('.card-stack-item'));
+                let positions = [2, 1, 0]; // Corresponds to DOM order: card3 is pos 0
+                
+                stack.addEventListener('click', () => {
+                    const topCardIndex = positions.indexOf(0);
+                    const topCard = cards[topCardIndex];
+                    
+                    topCard.classList.add('throwing');
+                    
+                    setTimeout(() => {
+                        positions = positions.map(pos => pos === 0 ? 2 : pos - 1);
+                        cards.forEach((card, i) => {
+                            card.setAttribute('data-stack-pos', positions[i]);
+                        });
+                        topCard.classList.remove('throwing');
+                    }, 400); 
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,249 @@
+/* Custom CSS for patterns and animations not covered by Tailwind utilities */
+
+/* Playful grid background pattern with radial mask */
+body.grid-pattern {
+    background-image: none;
+}
+body.grid-pattern::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image: 
+        linear-gradient(to right, rgba(45, 52, 54, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(45, 52, 54, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 80%);
+    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 10%, rgba(0,0,0,0) 80%);
+}
+
+/* Scrollbar Customization */
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #fdfaf6;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #ffcc00;
+    border: 3px solid #2d3436;
+    border-radius: 1rem;
+}
+
+/* Playful background shapes */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.8;
+    border: 4px solid #2d3436;
+}
+
+.blob-1 {
+    top: 5%;
+    left: 5%;
+    width: 150px;
+    height: 150px;
+    background: #ffcc00;
+    animation: bounce 4s infinite ease-in-out;
+}
+
+.blob-2 {
+    bottom: 10%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    background: #7dd3fc;
+    animation: bounce 5s infinite ease-in-out reverse;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Morph Animation for Hero Image */
+.morph-anim {
+    animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+    0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+    50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; }
+    100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+
+/* Navbar Indicator */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #ffcc00;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.header.sticky {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 4px solid #2d3436;
+    background-color: rgba(253, 250, 246, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+/* Scroll Animation Classes */
+.hidden-fade {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hidden-right {
+    opacity: 0;
+    transform: translateX(100px) rotate(5deg);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hidden-left {
+    opacity: 0;
+    transform: translateX(-100px) rotate(-5deg);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hidden-up {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+}
+
+/* Image Pulse Glow Animation */
+@keyframes pulse-glow-img {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 10px rgba(255,204,0,0.5)) drop-shadow(5px 5px 0 #2d3436);
+    }
+    50% {
+        transform: scale(1.04);
+        filter: drop-shadow(0 0 20px rgba(255,204,0,1)) drop-shadow(5px 5px 0 #2d3436);
+    }
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow-img 4s ease-in-out infinite;
+}
+
+/* Animated Thread of Fate */
+@keyframes thread-flow {
+    from {
+        stroke-dashoffset: 48;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.animate-thread-flow {
+    stroke-dasharray: 12 12;
+    animation: thread-flow 1.5s linear infinite;
+}
+
+/* 3D Flip Card Effect */
+.flip-card {
+    perspective: 1000px;
+    z-index: 10;
+}
+.flip-card:hover {
+    z-index: 50;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg) scale(1.1) rotateZ(0deg) !important;
+}
+.flip-card-front {
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.flip-card-back {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+/* Floating Animations for Doodles */
+.animate-float {
+    animation: bounce 4s infinite ease-in-out;
+}
+.animate-float-delayed {
+    animation: bounce 5s infinite ease-in-out 1.5s;
+}
+
+/* Stacked Cards Layout */
+.card-stack-container {
+    position: relative;
+    width: 180px;
+    height: 240px;
+    cursor: pointer;
+}
+.card-stack-container:hover .card-stack-item[data-stack-pos="0"] {
+    transform: rotateZ(0deg) scale(1.05);
+}
+.card-stack-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Stack Positions */
+.card-stack-item[data-stack-pos="0"] {
+    z-index: 30;
+    transform: rotateZ(-3deg) translateY(0) scale(1);
+    opacity: 1;
+}
+.card-stack-item[data-stack-pos="1"] {
+    z-index: 20;
+    transform: rotateZ(4deg) translateY(10px) translateX(8px) scale(0.95);
+    opacity: 0.8;
+}
+.card-stack-item[data-stack-pos="2"] {
+    z-index: 10;
+    transform: rotateZ(-5deg) translateY(20px) translateX(-8px) scale(0.9);
+    opacity: 0.6;
+}
+
+/* Animating out */
+.card-stack-item.throwing {
+    z-index: 40 !important;
+    transform: rotateZ(20deg) translateY(-50px) translateX(120px) scale(1.1) !important;
+    opacity: 0 !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
